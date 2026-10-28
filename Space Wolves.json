@@ -228,6 +228,16 @@
         "targetId": "3ade-f63f-41e2-9a99",
         "type": "selectionEntry",
         "categoryLinks": [{"name": "Troops", "id": "5246-835d-bee5-a101", "primary": true, "targetId": "88e6-d373-4152-0dd8"}]
+      },
+      {
+        "name": "Campaign Doctrine: The Pale Hunters",
+        "id": "ff99-f0c2-6327-4956",
+        "comment": "Prospero Burns campaign",
+        "hidden": false,
+        "import": true,
+        "targetId": "f6b3-929b-6f66-df86",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Army Configuration", "id": "5228-0d97-f01d-fb45", "primary": true, "targetId": "abfa-86ab-1726-077a"}]
       }
     ],
     "sharedSelectionEntries": [
@@ -5825,6 +5835,95 @@
                 "type": "increment",
                 "value": 2,
                 "repeats": [{"childId": "model", "field": "selections", "includeChildSelections": true, "repeats": 1, "roundUp": false, "scope": "unit", "shared": true, "value": 1}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Campaign Doctrine: The Pale Hunters",
+        "id": "f6b3-929b-6f66-df86",
+        "comment": "Prospero Burns campaign",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "efab-3f96-6f4e-4bc7",
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": 1,
+            "includeChildSelections": true,
+            "includeChildForces": true
+          }
+        ],
+        "costs": [{"name": "Point(s)", "typeId": "9893-c379-920b-8982", "value": 0}, {"name": "Reaction Point(s)", "typeId": "c9ba-097e-c47f-ecc2", "value": 0}],
+        "rules": [
+          {
+            "name": "Campaign Doctrine",
+            "id": "dbea-c160-87d1-cca7",
+            "hidden": false,
+            "description": "The Wolves hunt as their namesakes do: circling, harrying and wearing the prey down until it can no longer run. A player may choose one Campaign Doctrine for their army in addition to its Rite of War (Prospero Burns campaign games only)."
+          },
+          {
+            "name": "The Circling Wolves",
+            "id": "8ec2-32fd-0ccd-c10b",
+            "hidden": false,
+            "description": "Add +1 to Reserves Tests made for Units in the Primary Detachment."
+          },
+          {
+            "name": "Bleed and Harry",
+            "id": "2b8a-5244-143f-8ae5",
+            "hidden": false,
+            "description": "In the Resolution Sub-Phase, a Unit with the Space Wolves Trait and the Infantry Type, but without the Heavy Sub-Type, may choose to Disengage whatever the result of the Combat."
+          },
+          {
+            "name": "The Fury of the Pack",
+            "id": "b649-4a94-fc9c-4678",
+            "hidden": false,
+            "description": "When a Unit with the Space Wolves Trait makes a successful Charge against an enemy Unit that is already Locked in Combat, its Models gain +1 Attacks until the end of that Assault Phase."
+          },
+          {
+            "name": "Limitations",
+            "id": "f30b-cd0e-ea2d-248d",
+            "hidden": false,
+            "description": "The Primary Detachment may not include Fortifications, or any Model or Unit that may only enter play by Deep Strike from a drop pod or Dreadclaw. The Primary Detachment may include no more than one Unit with the Armour Battlefield Role. (Fortifications and Armour are checked automatically; drop pods/Dreadclaws by hand.)"
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "error",
+            "type": "add",
+            "value": "The Pale Hunters: no Fortifications allowed",
+            "conditions": [
+              {
+                "childId": "7e2f-62cf-4e42-9e13",
+                "field": "selections",
+                "scope": "force",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "error",
+            "type": "add",
+            "value": "The Pale Hunters: no more than one Armour Unit allowed",
+            "conditions": [
+              {
+                "childId": "643a-1012-bd51-6537",
+                "field": "selections",
+                "scope": "force",
+                "includeChildForces": true,
+                "includeChildSelections": true,
+                "shared": true,
+                "type": "greaterThan",
+                "value": 1
               }
             ]
           }
