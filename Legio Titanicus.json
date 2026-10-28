@@ -1565,6 +1565,42 @@
                 ]
               }
             ]
+          },
+          {
+            "name": "Venator Ignitum (Prospero Burns)",
+            "id": "e2cb-b3b2-dee2-d5a3",
+            "comment": "Prospero Burns campaign",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [
+              {"id": "f341-4b1f-c7b3-fd59", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1},
+              {
+                "id": "f4fb-13d8-da7c-dab4",
+                "field": "selections",
+                "scope": "roster",
+                "shared": true,
+                "type": "max",
+                "value": 1,
+                "includeChildSelections": true,
+                "includeChildForces": true
+              }
+            ],
+            "costs": [{"name": "Point(s)", "typeId": "9893-c379-920b-8982", "value": 0}, {"name": "Reaction Point(s)", "typeId": "c9ba-097e-c47f-ecc2", "value": 0}],
+            "rules": [
+              {
+                "name": "Venator Ignitum, the Canis Vertex",
+                "id": "1ba2-1e4b-b128-77e7",
+                "hidden": false,
+                "description": "The Legio Ignatum Warhound Venator Ignitum (Princeps Jarik Volkov) stands with the Ocularis Ignis. In any Prospero Burns campaign game it counts as a Hero. It is the only Titan the Persecuted may field before Phase Three."
+              },
+              {
+                "name": "The Dying Engine (Canis Vertex only)",
+                "id": "c39b-a946-1eed-3fd9",
+                "hidden": false,
+                "description": "In the Canis Vertex Legendary mission Venator Ignitum is free (it does not count toward the Points Limit or Lord of War cap) and is modified as follows. Crippled: it has the Minoris Crew Trait and may pivot but may not otherwise move. Failing Shields: its Titan Void Shield Array (2) is reduced to (1), and that void shield can never be restored during the battle. Heretical Reactor: at the start of each Persecuted Player Turn, every enemy Unit within 12\" must make a Willpower Check; a Unit that fails gains the Suppressed Status. Persecuted Models with the Psyker Trait within 12\" add +1 to the Target Number of Manifestation Checks."
+              }
+            ]
           }
         ]
       },

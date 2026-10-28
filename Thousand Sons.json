@@ -202,6 +202,16 @@
         "type": "selectionEntry",
         "categoryLinks": [{"name": "Fast Attack", "id": "0029-077b-e57b-09f8", "hidden": false, "primary": true, "targetId": "cf96-8891-3f9a-8921"}],
         "modifiers": [{"field": "category", "type": "set-primary", "value": "6bea-2cb9-c6b9-d183"}]
+      },
+      {
+        "name": "Campaign Doctrine: The Axis of Dissolution",
+        "id": "5d13-3b47-51f2-1f8c",
+        "comment": "Prospero Burns campaign",
+        "hidden": false,
+        "import": true,
+        "targetId": "f876-29f9-8d9f-c073",
+        "type": "selectionEntry",
+        "categoryLinks": [{"name": "Army Configuration", "id": "3349-52c4-2b8c-dae7", "primary": true, "targetId": "abfa-86ab-1726-077a"}]
       }
     ],
     "sharedProfiles": [
@@ -4701,6 +4711,60 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Campaign Doctrine: The Axis of Dissolution",
+        "id": "f876-29f9-8d9f-c073",
+        "comment": "Prospero Burns campaign",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "9559-8527-e2bc-9f1a",
+            "field": "selections",
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": 1,
+            "includeChildSelections": true,
+            "includeChildForces": true
+          }
+        ],
+        "costs": [{"name": "Point(s)", "typeId": "9893-c379-920b-8982", "value": 0}, {"name": "Reaction Point(s)", "typeId": "c9ba-097e-c47f-ecc2", "value": 0}],
+        "rules": [
+          {
+            "name": "Campaign Doctrine",
+            "id": "1de5-159b-964f-0ebc",
+            "hidden": false,
+            "description": "Named for an alchemical formula, the Axis was a battle-configuration that let the enemy impale itself on the Legion's lines, then bled it white as it tried to withdraw. A player may choose one Campaign Doctrine for their army in addition to its Rite of War (Prospero Burns campaign games only)."
+          },
+          {
+            "name": "The Alembic of Adamant",
+            "id": "bdb7-c113-c9b0-9efd",
+            "hidden": false,
+            "description": "Models with the Thousand Sons Trait that are within 6\" of an Objective Marker automatically pass Cool Checks made due to the Pinning (X) Special Rule and Leadership Checks made due to Panic."
+          },
+          {
+            "name": "The Caustic of Grace",
+            "id": "ed70-8c36-5e9e-3e4b",
+            "hidden": false,
+            "description": "When a Unit with the Thousand Sons Trait makes an Overwatch Reaction, add +1 to its Hit Tests for that Reaction."
+          },
+          {
+            "name": "The Transition of Vitriol",
+            "id": "8ee6-a31f-19bd-55ee",
+            "hidden": false,
+            "description": "Models with the Thousand Sons Trait may re-roll failed Hit Tests and Wound Tests against enemy Units with the Routed Status."
+          },
+          {
+            "name": "Limitations",
+            "id": "5e8e-38d3-2f80-8915",
+            "hidden": false,
+            "description": "Every Unit with the Troops Battlefield Role in the Primary Detachment must include the maximum number of Models its profile allows. The Primary Detachment may not include more Units with the Armour Battlefield Role than Units with the Infantry Type. (Not checked automatically - check by hand.)"
+          }
+        ],
+        "modifiers": []
       }
     ],
     "sharedSelectionEntryGroups": [
