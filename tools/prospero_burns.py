@@ -292,6 +292,29 @@ def apply_templars():
     save(fname, data)
 
 
+# ---- House ruling: Dreadnought Talon (Mortificator) takes any Contemptor- or
+# Castra Ferrum-chassis Dreadnought, including Legion-specific variants ------
+TALON_FORCE = '9ffc-1414-bcb2-ca4b'
+TALON_SLOT = 'f817-34d5-598c-d196'  # "War Engine - Contemptor Dreadnoughts Only"
+TALON_LINKS = {  # file: root entry links (standard War-engine links only)
+    'Legiones Astartes.json': ['0365-190b-7181-ec24'],   # Castra Ferrum Dreadnought
+    'Thousand Sons.json': ['1ee2-34ab-cb0e-3b25'],       # Contemptor-Osiron Dreadnought
+    'Blood Angels.json': ['5dc8-3fde-9013-ef36'],        # Contemptor-Incaendius Dreadnought
+}
+
+
+def apply_talon():
+    mod = {'comment': TAG, 'field': 'category', 'type': 'set-primary', 'value': TALON_SLOT,
+           'conditions': [{'childId': TALON_FORCE, 'field': 'selections', 'includeChildSelections': True,
+                           'scope': 'parent', 'shared': True, 'type': 'instanceOf', 'value': 1}]}
+    for fname, ids in TALON_LINKS.items():
+        data = load(fname)
+        for link in data['catalogue']['entryLinks']:
+            if link['id'] in ids:
+                link['modifiers'] = strip_tagged(link.get('modifiers', [])) + [dict(mod)]
+        save(fname, data)
+
+
 # ---- Game system name -------------------------------------------------------
 def apply_name():
     fname = 'Horus Heresy 3rd Edition.json'
@@ -305,5 +328,6 @@ if __name__ == '__main__':
         apply_doctrine(f, d)
     apply_venator()
     apply_templars()
+    apply_talon()
     apply_name()
     print('Prospero Burns additions applied.')

@@ -1836,6 +1836,13 @@
             "type": "set-primary",
             "value": "d00a-e269-2ed3-8fc4",
             "conditions": [{"childId": "d00a-e269-2ed3-8fc4", "field": "selections", "includeChildSelections": true, "scope": "parent", "shared": true, "type": "instanceOf", "value": 1}]
+          },
+          {
+            "comment": "Prospero Burns campaign",
+            "field": "category",
+            "type": "set-primary",
+            "value": "f817-34d5-598c-d196",
+            "conditions": [{"childId": "9ffc-1414-bcb2-ca4b", "field": "selections", "includeChildSelections": true, "scope": "parent", "shared": true, "type": "instanceOf", "value": 1}]
           }
         ]
       },

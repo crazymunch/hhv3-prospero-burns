@@ -125,6 +125,15 @@
         "categoryLinks": [
           {"name": "War-engine", "id": "f52b-f1b9-b782-5431", "primary": true, "targetId": "2499-7239-685f-8465"},
           {"name": "Thousand Sons", "id": "e776-be0c-df58-5e88", "primary": false, "targetId": "7c3f-93c7-d5b9-89e3"}
+        ],
+        "modifiers": [
+          {
+            "comment": "Prospero Burns campaign",
+            "field": "category",
+            "type": "set-primary",
+            "value": "f817-34d5-598c-d196",
+            "conditions": [{"childId": "9ffc-1414-bcb2-ca4b", "field": "selections", "includeChildSelections": true, "scope": "parent", "shared": true, "type": "instanceOf", "value": 1}]
+          }
         ]
       },
       {

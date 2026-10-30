@@ -79,6 +79,15 @@
         "categoryLinks": [
           {"name": "War-engine", "id": "ca20-6c57-c851-b03b", "primary": true, "targetId": "2499-7239-685f-8465"},
           {"name": "Blood Angels", "id": "e1d6-5c70-cfcc-063e", "primary": false, "targetId": "53b2-d251-a827-8e73"}
+        ],
+        "modifiers": [
+          {
+            "comment": "Prospero Burns campaign",
+            "field": "category",
+            "type": "set-primary",
+            "value": "f817-34d5-598c-d196",
+            "conditions": [{"childId": "9ffc-1414-bcb2-ca4b", "field": "selections", "includeChildSelections": true, "scope": "parent", "shared": true, "type": "instanceOf", "value": 1}]
+          }
         ]
       },
       {
