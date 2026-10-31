@@ -17,6 +17,7 @@ BattleScribe can't read this repo: the data is in New Recruit's JSON format.
 | Campaign Doctrine: The Axis of Dissolution | Thousand Sons army, Army Configuration (next to Rite of War) | Optional, max 1. Its Troops and Armour limits are **not** checked automatically. |
 | Campaign Doctrine: The Pale Hunters | Space Wolves army, Army Configuration | Optional, max 1. Shows an error if the detachment has a Fortification or more than one Armour unit. Drop pods and Dreadclaws are not checked. |
 | Venator Ignitum (Prospero Burns) | Upgrade on the Warhound Titan (Legio Titanicus) | 0 pts, max 1. Carries the Canis Vertex and Dying Engine rules. |
+| Dreadnought Talon house ruling | Auxiliary – Dreadnought Talon (needs a Mortificator) | Any Contemptor- or Castra Ferrum-chassis Dreadnought can fill the Talon's slots: Contemptor, Castra Ferrum, Contemptor-Osiron (Thousand Sons), Contemptor-Incaendius (Blood Angels). The slot keeps its official name, "Contemptor Dreadnoughts Only". |
 | Spireguard Templar Section | Solar Auxilia, Elites | Hidden unless the army has the Prosperine Spireguard designation. 110 pts for 10, +10 per extra Templar, up to 20. Playtest points. |
 
 Every object the campaign adds is tagged `"comment": "Prospero Burns campaign"`. The only official line changed is the game system's display name.
